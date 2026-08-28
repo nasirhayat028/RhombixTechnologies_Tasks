@@ -1,0 +1,11 @@
+Rhombix Technologies - Linux Fundamentals
+
+This project demonstrates basic Linux command-line operations.
+
+Topics covered:
+- File navigation
+- Directory management
+- File creation and editing
+- File permissions
+- System resource monitoring
+- Package management
