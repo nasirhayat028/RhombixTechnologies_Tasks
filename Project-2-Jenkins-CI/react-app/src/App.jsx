@@ -20,38 +20,78 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Jenkins CI Demo App</h1>
+      <header className="app-header">
+        <span className="badge">Rhombix Technologies &bull; DevOps Internship</span>
+        <h1>Jenkins CI Demo App</h1>
+        <p className="subtitle">
+          A small React application built to exercise an automated Jenkins pipeline —
+          install, lint, test, and build — for Project 2 of the Rhombix Technologies
+          DevOps internship.
+        </p>
+      </header>
 
-      <section className="card">
-        <h2>Counter</h2>
-        <p data-testid="count-value">Count: {count}</p>
-        <button onClick={() => setCount((c) => c + 1)}>Increment</button>
-        <button onClick={() => setCount((c) => c - 1)}>Decrement</button>
-        <button onClick={() => setCount(0)}>Reset</button>
-      </section>
+      <main>
+        <section className="counter-card">
+          <span className="counter-star" aria-hidden="true">★</span>
+          <h2>Counter</h2>
+          <p className="count-value" data-testid="count-value">
+            Count: {count}
+          </p>
+          <div className="counter-controls">
+            <button
+              className="icon-btn"
+              aria-label="Increment"
+              onClick={() => setCount((c) => c + 1)}
+            >
+              +
+            </button>
+            <button
+              className="icon-btn"
+              aria-label="Decrement"
+              onClick={() => setCount((c) => c - 1)}
+            >
+              &minus;
+            </button>
+          </div>
+          <button className="reset-btn" onClick={() => setCount(0)}>
+            Reset
+          </button>
+        </section>
 
-      <section className="card">
-        <h2>Task List</h2>
-        <form onSubmit={addTask}>
-          <input
-            aria-label="new-task"
-            value={taskInput}
-            onChange={(e) => setTaskInput(e.target.value)}
-            placeholder="Add a task"
-          />
-          <button type="submit">Add</button>
-        </form>
-        <ul>
-          {tasks.map((task, index) => (
-            <li key={`${task}-${index}`}>
-              {task}
-              <button aria-label={`remove-${task}`} onClick={() => removeTask(index)}>
-                Remove
-              </button>
-            </li>
-          ))}
-        </ul>
-      </section>
+        <section className="card task-card">
+          <h2>Task List</h2>
+          <form className="task-form" onSubmit={addTask}>
+            <input
+              aria-label="new-task"
+              value={taskInput}
+              onChange={(e) => setTaskInput(e.target.value)}
+              placeholder="Add a task"
+            />
+            <button type="submit">Add</button>
+          </form>
+          <ul className="task-list">
+            {tasks.map((task, index) => (
+              <li key={`${task}-${index}`}>
+                <span>{task}</span>
+                <button
+                  className="remove-btn"
+                  aria-label={`remove-${task}`}
+                  onClick={() => removeTask(index)}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </main>
+
+      <footer className="app-footer">
+        <p>
+          Built by <strong>Nasir Hayat</strong> as part of the Rhombix Technologies
+          DevOps Internship — Project 2: Jenkins CI.
+        </p>
+      </footer>
     </div>
   )
 }

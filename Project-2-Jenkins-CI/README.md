@@ -2,10 +2,19 @@
 
 ## About
 
-This project provides a small, testable **React application** used as the build/test
+This is my submission for **Project 2** of the **Rhombix Technologies DevOps
+internship**. It provides a small, testable **React application** used as the build/test
 target for a Jenkins CI pipeline. The goal isn't the app itself — it's demonstrating a
-working CI flow: install dependencies, lint, run automated tests, and produce a
-production build.
+working CI flow end-to-end: install dependencies, lint, run automated tests, and produce
+a production build, all driven by a Jenkins declarative pipeline.
+
+## App Preview
+
+![Jenkins CI Demo App preview](docs/app-preview.png)
+
+The UI is a small counter + task list demo: a gradient counter card with increment,
+decrement, and reset controls, and a task list card for adding/removing items — styled
+to look presentable while staying simple enough to reason about in a CI context.
 
 ## What's Included
 
@@ -15,6 +24,7 @@ production build.
     [`src/App.test.jsx`](react-app/src/App.test.jsx)
 - **`Jenkinsfile`** — a declarative Jenkins pipeline with `Install → Lint → Test → Build`
   stages, pointed at `react-app/`.
+- **`docs/`** — a screenshot of the running app, used above.
 
 ## Running Locally
 
@@ -49,6 +59,14 @@ The [`Jenkinsfile`](Jenkinsfile) defines a pipeline that:
 Point a Jenkins **Pipeline** job (or a **Multibranch Pipeline**) at this repository with
 the Jenkinsfile path set to `Project-2-Jenkins-CI/Jenkinsfile`, and ensure a NodeJS tool
 named `NodeJS` is configured under **Manage Jenkins → Tools**.
+
+## Internship Context
+
+This project extends my work for the **Rhombix Technologies internship** (DevOps
+track). Alongside the required submission ([Project 1 — Linux
+Fundamentals](../Project-1-Linux-Fundamentals/)), I built this Jenkins CI pipeline as
+additional, self-driven practice with the DevOps/CI tooling the internship is centered
+around.
 
 ## Author
 
