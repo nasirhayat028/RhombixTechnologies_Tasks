@@ -18,6 +18,7 @@ I selected **Project 1 — Linux Fundamentals & Command-Line Practice**.
 | Project | Status | Description |
 |---|---|---|
 | [Project-1-Linux-Fundamentals](Project-1-Linux-Fundamentals/) | ✅ Complete | Linux command-line fundamentals — navigation, file management, permissions, system monitoring, package management, and Bash scripting. Fully documented in its own [README](Project-1-Linux-Fundamentals/README.md) and [docs/](Project-1-Linux-Fundamentals/docs/) folder. |
+| [Project-2-Jenkins-CI](Project-2-Jenkins-CI/) | ✅ Complete | A sample React app (Vite + Vitest + React Testing Library) with automated tests, used as the build/test target for a Jenkins declarative pipeline. See its own [README](Project-2-Jenkins-CI/README.md). |
 
 Additional tasks, if assigned in the future, will each be added here as their own top-level `Project-N-<name>/` folder with its own README and documentation, following the same structure as Project 1.
 
@@ -27,11 +28,15 @@ Additional tasks, if assigned in the future, will each be added here as their ow
 RhombixTechnologies_Tasks/
 ├── README.md                          # This file — repository overview
 ├── .gitignore                         # Shared across all projects in this repo
-└── Project-1-Linux-Fundamentals/      # Linux Fundamentals submission (complete)
+├── Project-1-Linux-Fundamentals/      # Linux Fundamentals submission (complete)
+│   ├── README.md
+│   ├── docs/
+│   ├── linux-practice/
+│   └── scripts/
+└── Project-2-Jenkins-CI/              # Jenkins CI submission (complete)
     ├── README.md
-    ├── docs/
-    ├── linux-practice/
-    └── scripts/
+    ├── Jenkinsfile
+    └── react-app/
 ```
 
 ## Author

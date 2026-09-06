@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+
+    tools {
+        nodejs 'NodeJS'
+    }
+
+    environment {
+        APP_DIR = 'Project-2-Jenkins-CI/react-app'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                dir(APP_DIR) {
+                    sh 'npm ci'
+                }
+            }
+        }
+
+        stage('Lint') {
+            steps {
+                dir(APP_DIR) {
+                    sh 'npm run lint'
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                dir(APP_DIR) {
+                    sh 'npm run test'
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                dir(APP_DIR) {
+                    sh 'npm run build'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Build, tests, and lint all passed.'
+        }
+        failure {
+            echo 'Pipeline failed — check the stage logs above.'
+        }
+    }
+}

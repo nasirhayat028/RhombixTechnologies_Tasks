@@ -1,0 +1,26 @@
+.app {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: system-ui, sans-serif;
+  text-align: left;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+}
